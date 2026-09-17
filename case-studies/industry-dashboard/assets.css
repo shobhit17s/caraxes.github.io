@@ -1,0 +1,18 @@
+/* assets.css — where this case study's own drawings live.
+
+   File paths belong in a stylesheet that sits beside the files, and they must
+   be written as the real property — mask-image, background-image — not routed
+   through a custom property. A url() inside a custom property resolves
+   against whichever stylesheet reads the property, which would be the
+   engine's, in another folder entirely.
+
+   To swap a drawing: change the file name on one line. */
+
+/* a stencil: the shape only, filled with the current line colour */
+.fig-hero-rule {
+  -webkit-mask-image: url('assets/hero-rule.svg');
+  mask-image: url('assets/hero-rule.svg');
+}
+
+/* artwork: shown as itself, keeping its own tone and colour */
+.art-hero-desk { background-image: url('assets/hero-desk.png'); }
